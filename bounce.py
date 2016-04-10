@@ -109,7 +109,7 @@ class Ball:
     def draw(self, c):
         if self.t is None:
             self.t = time.perf_counter()
-        t = time.perf_counter - self.t
+        t = time.perf_counter() - self.t
         pos = self.pos + self.vel.scale(t)
         r = self.r
         c.create_oval(pos.x - r, pos.y - r, pos.x + r, pos.y + r, fill='black')
